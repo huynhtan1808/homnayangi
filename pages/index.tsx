@@ -96,10 +96,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Hôm nay ăn gì?</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="og:title" content="Hôm nay anh muốn ăn gì?🧑‍🍳" />
+        <meta name="og:title" content="Hôm nay chúng ta ăn gì?🧑‍🍳" />
         <meta
           name="og:description"
-          content="Giúp vợ nấu ăn"
+          content="Giúp vợ nấu ăn. Chỉ cần liệt kê các nguyên liệu em có và anh sẽ giúp em chọn món, sau đó chỉ em cách nấu."
         />
         <meta
           name="og:image"
