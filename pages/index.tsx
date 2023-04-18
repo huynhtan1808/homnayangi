@@ -116,8 +116,8 @@ const Home: NextPage = () => {
           </h1>
 
           <p className="mt-3 text-xl font-light dark:text-slate-100 font-lato">
-          Em không biết nấu món gì hôm nay hả? Chỉ cần liệt kê các nguyên liệu em
-          có và anh sẽ giúp em chọn món và hướng dẫn em cách nấu nha.
+          Em không biết nấu món gì hôm nay đúng không? Chỉ cần liệt kê các nguyên liệu em
+          có và anh sẽ giúp em chọn món và chỉ em cách nấu nha.
           </p>
 
           <form
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
                     >
                       <Input
                         {...register(`ingredients.${index}.value`)}
-                        className="min-w-[195px]"
+                        className="min-w-[190px]"
                         placeholder={
                           ingredientPlaceholders[
                             Math.floor(
@@ -187,7 +187,7 @@ const Home: NextPage = () => {
                 recipeMutation.isLoading ||
                 fields.length === 0 
                 // ||
-                // tokenSaved
+                // !tokenSaved
               }
             >
               Nấu gì đây anh ơi?
