@@ -185,8 +185,9 @@ const Home: NextPage = () => {
                 !isValid ||
                 isSubmitting ||
                 recipeMutation.isLoading ||
-                fields.length === 0 ||
-                !tokenSaved
+                fields.length === 0 
+                // ||
+                // tokenSaved
               }
             >
               Nấu gì đây anh ơi?

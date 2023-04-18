@@ -20,9 +20,6 @@ import Moon from "@/public/icons/moon-outline.svg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import TwitterSolid from "@/public/icons/twitter-solid.svg";
-import GithubSolid from "@/public/icons/github-solid.svg";
-import { event } from "@/lib/ga";
 
 const schema = z.object({
   token: z

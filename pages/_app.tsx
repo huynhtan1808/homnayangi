@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div
             className="bg-orange-50 dark:bg-slate-900 font-sans"
           >
