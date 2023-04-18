@@ -116,8 +116,8 @@ const Home: NextPage = () => {
           </h1>
 
           <p className="mt-3 text-xl font-light dark:text-slate-100 font-lato">
-          Em không biết nấu món gì hôm nay đúng không? Chỉ cần liệt kê các nguyên liệu em
-          có và anh sẽ giúp em chọn món và chỉ em cách nấu nha.
+          Chỉ cần liệt kê các nguyên liệu em
+          có và anh sẽ giúp em chọn món, sau đó chỉ em cách nấu nha.
           </p>
 
           <form
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
               >
                 <PlusCircleSolid className="w-6 h-6 text-orange-500 dark:text-orange-100" />
                 <span className="text-sm font-semibold text-orange-500 dark:text-orange-100 whitespace-nowrap">
-                  Thêm nguyên liệu
+                  Thêm nguyên liệu hoặc Món ăn 
                 </span>
               </button>
             </div>
