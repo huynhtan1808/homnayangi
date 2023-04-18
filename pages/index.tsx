@@ -153,10 +153,10 @@ const Home: NextPage = () => {
                       />
                       <button
                         type="button"
-                        className="absolute top-0 right-0 transition-opacity opacity-100 lg:opacity-0 group-hover:opacity-100"
+                        className="absolute bottom-3 right-2 transition-opacity opacity-100 lg:opacity-0 group-hover:opacity-100"
                         onClick={() => remove(index)}
                       >
-                        <PlusCircleSolid className="w-5 h-5 text-red-500 rotate-45 hover:text-red-400" />
+                        <PlusCircleSolid className="w-6 h-6 text-red-500 rotate-45 hover:text-red-400" />
                       </button>
                     </div>
                   ))}
