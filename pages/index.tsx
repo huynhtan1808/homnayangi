@@ -19,14 +19,14 @@ const schema = z.object({
 });
 
 const ingredientPlaceholders: string[] = [
-  "3 cà rốt",
+  "3 củ cà rốt",
   "hai quả trứng",
   "3ml sữa",
-  "ít đường",
+  "bột mì",
   "kim chi",
   "mì gói",
   "2 lạng thịt heo",
-  "1 hủ sốt cà chua",
+  "sốt cà chua",
   "5 lạng thịt bò",
   "nửa con gà",
 ];
@@ -109,15 +109,15 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="w-full min-h-screen px-5 bg-top bg-cover lg:px-20 py-28">
-        <section className="lg:max-w-2xl mx-auto min-h-[45vh] flex flex-col justify-center">
+      <main className="w-full min-h-screen px-5 bg-top bg-cover py-8">
+        <section className="md:max-w-prose mx-auto min-h-[45vh] flex flex-col justify-center">
           <h1 className="text-5xl font-bold lg:text-6xl text-slate-700 dark:text-white">
           Hôm nay <span className="text-orange-500">ăn gì</span>? 🧑‍🍳
           </h1>
 
-          <p className="mt-3 text-xl font-light lg:text-2xl dark:text-slate-100 font-lato">
+          <p className="mt-3 text-xl font-light dark:text-slate-100 font-lato">
           Em không biết nấu món gì hôm nay hả? Chỉ cần liệt kê các nguyên liệu em
-          có và anh sẽ giúp em chọn món nha.
+          có và anh sẽ giúp em chọn món và hướng dẫn em cách nấu nha.
           </p>
 
           <form
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
                     >
                       <Input
                         {...register(`ingredients.${index}.value`)}
-                        className="min-w-[200px]"
+                        className="min-w-[195px]"
                         placeholder={
                           ingredientPlaceholders[
                             Math.floor(
@@ -200,7 +200,7 @@ const Home: NextPage = () => {
             className="max-w-prose"
           >
             <Transition.Child
-              className="flex items-center w-full mb-10 lg:mb-20 lg:flex-row-reverse"
+              className="flex items-center w-full mb-10 lg:mb-10 lg:flex-row-reverse"
               enter="transition-opacity ease-linear duration-300"
               enterFrom="opacity-0"
               enterTo="opacity-100"
