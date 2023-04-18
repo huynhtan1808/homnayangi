@@ -11,7 +11,6 @@ import ReactMarkdown from "react-markdown";
 import { Transition } from "@headlessui/react";
 import Cross from "@/public/icons/close-outline.svg";
 import { useState } from "react";
-import useLocalStorage from "@/hooks/useLocalStorage";
 import { event } from "@/lib/ga";
 
 const schema = z.object({
@@ -36,7 +35,6 @@ type FormState = {
 };
 
 const Home: NextPage = () => {
-  const [tokenSaved] = useLocalStorage("token_saved", false);
 
   const [text, setText] = useState("");
   const {

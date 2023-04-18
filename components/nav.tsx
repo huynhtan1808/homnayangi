@@ -10,53 +10,16 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import useLocalStorage from "@/hooks/useLocalStorage";
 import { useMutation } from "@tanstack/react-query";
 import { cn } from "@/lib/cn";
-import { Input } from "./ui/input";
+
 import { useTheme } from "next-themes";
 import Sun from "@/public/icons/sun-outline.svg";
 import Moon from "@/public/icons/moon-outline.svg";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 
-const schema = z.object({
-  token: z
-    .string({
-      invalid_type_error: "Please enter an OpenAI token",
-      required_error: "This field is required",
-    })
-    .regex(/^sk-[A-Za-z0-9-_]{48}$/, "Please enter an OpenAI token")
-    .min(51, "Please enter an OpenAI token")
-    .max(51, "Please enter an OpenAI token"),
-});
 
-type FormState = {
-  token: string;
-};
 
 export default function Nav() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormState>({
-    resolver: zodResolver(schema),
-  });
-  const [tokenSaved, setTokenSaved] = useLocalStorage("token_saved", false);
-  const [open, setOpen] = React.useState(false);
-  const tokenMutation = useMutation({
-    mutationFn: (token: string) =>
-      fetch("/api/openai/setToken", {
-        method: "POST",
-        body: JSON.stringify({ token }),
-        headers: { "Content-Type": "application/json" },
-      }),
-    onSuccess: () => {
-      setTokenSaved(true);
-    },
-  });
 
   const [mounted, setMounted] = React.useState(false);
   const { theme, setTheme } = useTheme();
