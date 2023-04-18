@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 
       <main className="w-full min-h-screen px-5 bg-top bg-cover py-8">
         <section className="md:max-w-prose mx-auto min-h-[45vh] flex flex-col justify-center">
-          <h1 className="text-5xl font-bold lg:text-6xl text-slate-700 dark:text-white">
+          <h1 className="text-4xl font-bold lg:text-6xl text-slate-700 dark:text-white">
           Hôm nay <span className="text-orange-500">ăn gì</span>? 🧑‍🍳
           </h1>
 
