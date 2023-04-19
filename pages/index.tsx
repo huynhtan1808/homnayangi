@@ -94,6 +94,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Hôm nay ăn gì?</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="og:title" content="Hôm nay chúng ta ăn gì?🧑‍🍳" />
         <meta
           name="og:description"
