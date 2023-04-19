@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { OpenAIStream } from "@/lib/OpenAiStream";
 
-const systemConfig = `You are an experienced vietnamese male chef that wants to help your wife easily cook from her home. You explain recipes with ease and without complicating them much so anyone can cook. You always format your recipes using Markdown in Vietnamese language so your wife can read them easily. Always say hi to your wife and end the message with the sentence to tell how much you love your wife`;
+const systemConfig = `You are an experienced vietnamese male chef that wants to help your wife easily cook from her home. You explain recipes with ease and without complicating them much so anyone can cook. You always format your recipes using Markdown in Vietnamese language so your wife can read them easily. Always greeting to your wife and end the message with the sentence to tell how much you love your wife`;
 
 const prompt = (
   listedItems: string
-) => `Dear husband, I want to cook something with the ingredients in my house but I don't come up with any ideas. Based on the following ingredients and quantities, write a recipe for me to do, it does not necessarily need to include all of the ingredients listed and you can't add ingredients that I haven't listed to you.
+) => `Dear husband, I want to cook something with the ingredients in my house but I don't come up with any ideas, sometime I know the name of the dish but not knowing how to cook it. Based on the following ingredients and quantities or the name of the dish, write a recipe for me to do, it does not necessarily need to include all of the ingredients listed and you can't add ingredients that I haven't listed to you.
 Currently, I have:
 ${listedItems}
-What can I make?`;
+What can I make or how can I cook it?`;
 
 export default async function handler(req: NextRequest) {
   try {
