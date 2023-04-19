@@ -136,12 +136,12 @@ const Home: NextPage = () => {
                 <fieldset className="flex flex-wrap items-center gap-4 mx-auto lg:flex-row">
                   {fields.map((field, index) => (
                     <div
-                      className="relative w-full group lg:w-auto"
+                      className="relative w-full group lg:w-full"
                       key={field.id}
                     >
                       <Input
                         {...register(`ingredients.${index}.value`)}
-                        className="min-w-[190px]"
+                        className=""
                         placeholder={
                           ingredientPlaceholders[
                             Math.floor(
