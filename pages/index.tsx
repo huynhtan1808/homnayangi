@@ -109,7 +109,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="w-full min-h-screen px-5 bg-top bg-cover py-8">
-        <section className="md:max-w-prose mx-auto min-h-[45vh] flex flex-col justify-center">
+        <section className="md:max-w-xl mx-auto min-h-[45vh] flex flex-col justify-center">
           <h1 className="text-4xl font-bold lg:text-6xl text-slate-700 dark:text-white">
           Hôm nay <span className="text-orange-500">ăn gì</span>? 🧑‍🍳
           </h1>
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
         <div className="flex flex-wrap justify-center mx-auto sm:w-full">
           <Transition
             show={!!text && !recipeMutation.isError}
-            className="max-w-prose"
+            className="max-w-xl"
           >
             <Transition.Child
               className="flex items-center w-full mb-10 lg:mb-10 lg:flex-row-reverse"
@@ -229,7 +229,7 @@ const Home: NextPage = () => {
                   });
                   setText("");
                 }}
-                className="flex items-center gap-2 px-4 py-1 mx-auto text-sm text-white transition-opacity border border-red-400 rounded-full lg:gap-0 bg-rose-600 dark:bg-red-600 dark:text-red-300 hover:gap-2 group w-fit dark:bg-opacity-30 dark:hover:bg-opacity-70 flex-nowrap"
+                className="flex items-center gap-2 px-4 py-1 mx-auto text-sm text-white transition-opacity rounded-full lg:gap-0 bg-rose-600 dark:bg-red-600 dark:text-red-300 hover:gap-2 group w-fit dark:bg-opacity-30 dark:hover:bg-opacity-70 flex-nowrap"
               >
                 <span className="w-auto lg:w-0 lg:opacity-0 overflow-hidden transition-all group-hover:w-[50px] group-hover:opacity-100">
                   Xóa
